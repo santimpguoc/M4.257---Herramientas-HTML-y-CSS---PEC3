@@ -1,0 +1,48 @@
+doctype html
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Almonaster la Real
+    link(rel="stylesheet" href="css/styles.scss")
+  body
+    include header.pug
+    
+    main
+        section.index-main-section
+            .index-content
+                h1 Bienvenidos a Almonaster la Real
+                p Uno de los pueblos más bonitos de España y situado en la Sierra de Huelva, en pleno Parque Natural de Aracena y Picos de Aroche.
+
+                .index-carrusel
+                  .carrusel
+                    - var images = [
+                    - { src: "images/Almonaster-la-real-1-1", alt: "Foto 1", class: "active" },
+                    - { src: "images/iglesia-san-martin-almonaster-la-real", alt: "Foto 2" },
+                    - { src: "images/fuente_de_concejo", alt: "Foto 3" },
+                    - { src: "images/index_background_v1", alt: "Foto 4" },
+                    - { src: "images/index_background_v2", alt: "Foto 5" },
+                    - { src: "images/index_background_v3", alt: "Foto 6" },
+                    - { src: "images/mezquita-de-almonaster-la-real", alt: "Foto 7" },
+                    - { src: "images/Mezquita_de_al-Monastir_Haram", alt: "Foto 8" },
+                    - { src: "images/plaza-constitucion-almonaster-la-real", alt: "Foto 9" }
+                    - ]
+
+                    each image in images
+                      picture(class=image.class)
+                        source(srcset=`${image.src}-little.webp` type="image/webp" media="(max-width: 768px)")
+                        source(srcset=`${image.src}.webp` type="image/webp" media="(min-width: 769px)")
+                        img(
+                          src=`${image.src}.jpg`
+                          srcset=`${image.src}-little.jpg 768w`
+                          sizes="(max-width: 768px) 100vw"
+                          alt=image.alt
+                          class="clip-path_img")
+                    
+                    button.prev &lt;
+                    button.next &gt;
+
+                script(src="js/script.js")
+
+
+    include footer.pug

@@ -1,0 +1,5 @@
+La web debe cumplir las reglas básicas WCAG 2.1 
+
+Página de enlaces
+
+    Muy importante (en especial de cara a esta entrega): Ten en cuenta el uso de material protegido por derechos de autor, como se especifica en el último apartado de este documento. Recuerda cuáles son los límites y excepciones 

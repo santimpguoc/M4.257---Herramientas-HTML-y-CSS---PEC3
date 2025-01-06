@@ -1,0 +1,442 @@
+//Importar fuente
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+// Declaración la variable a utilizar en el resto del fichero de estilo
+$primary-color: #e6e8ea;
+$font-type: 'Roboto';
+
+//Estilos para documento html
+html{
+  max-width: 1280px;
+  width: 100vw;
+  margin: auto;  
+  font-family: $font-type;
+}
+
+// Estilos del header y navegación
+header {
+    background: rgba(0, 0, 0, 0.75);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    font-family: $font-type;
+    font-size: 1.25rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+  
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100vw;
+      
+      .logo {
+        height: 50px; // Ajusta el tamaño del logo según sea necesario
+        margin-right: 1.5rem;
+      }
+  
+      ul {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+        justify-content: space-between;
+  
+        li {
+          margin-left: 1.5rem;
+  
+          a {
+            color: white;
+            text-decoration: none;
+            &:hover {
+              color: $primary-color;
+            }
+          }
+        }
+      }
+    }
+  }
+
+// Estilos de la sección principal con imagen de fondo
+.index-main-section, .categoria-main-section, .detalle-main-section, .enlaces-main-section, .presentacion-main-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.30)), 
+                url('../images/index_background_v2.webp') no-repeat center center/cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+    
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  
+  .index-content {
+    max-width: 980px;
+  
+    h1 {
+      font-size: 3rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+    }
+  
+    p {
+      font-size: 1.25rem;
+      color:white;
+      font-family: $font-type;
+    }
+  }
+
+  .categoria-content, .detalle-content, .enlaces-content, .presentacion-content{
+    max-width: 1080px;
+    text-align: left;
+
+    background: rgba(255, 255, 255, 0.75);
+    border: solid 2px  rgba(0, 0, 0, 0.75);
+    padding: 1rem;
+    margin: 1rem;
+    color: rgba(0, 0, 0, 0.75);
+  
+    h1 {
+      font-size: 2rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    p, li{
+      font-size: 1.15rem;
+      font-family: $font-type;
+      line-height: 1.75rem;
+    }
+    span {
+      font-weight: bold;
+    }
+
+    .nota {
+      font-size: 1rem;
+      font-weight: normal;
+      line-height: normal;
+    }
+
+    figure{
+      text-align: center;
+    }
+    img{
+      width: 75%;
+      max-width: 1024px;
+    }
+  }
+
+  .presentacion-content-mis_datos {
+    display: flex;
+
+    .presentacion-content-mis_datos-texto{
+      max-width: 80%;
+    }
+    
+    .presentacion-content-mis_datos-imagen {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      svg {
+        max-width: 100%; /* El ancho máximo será igual al ancho de la ventana */
+        height: auto;     /* Mantiene la proporción al ajustar el ancho */
+        margin-top: -5em;
+        margin-bottom: -5em;
+        animation: pulsacion 3s linear infinite;
+      }
+    }
+  }
+
+  @keyframes pulsacion {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(0.8); /* Escala ligeramente hacia afuera */
+    }
+  }
+
+
+  //Estilo para los carruseles de imágenes
+  .index-carrusel{
+    position: relative;
+    background: rgba(255, 255, 255, 0.75);
+    border: solid 2px  rgba(0, 0, 0, 0.75);
+    padding: 1rem;
+    margin: 0 0 1rem 0;
+    width: 100%;
+  }
+  .carrusel {
+    overflow: hidden;
+    clip-path: polygon(
+      50% 0%, 
+      66.6% 16.6%, 
+      83.2% 16.6%, 
+      83.2% 33.4%, 
+      100% 50%, 
+      83.2% 66.6%, 
+      83.2% 83.2%, 
+      66.6% 83.2%, 
+      50% 100%, 
+      33.4% 83.2%, 
+      16.6% 83.2%, 
+      16.6% 66.6%, 
+      0% 50%, 
+      16.6% 33.4%, 
+      16.6% 16.6%, 
+      33.4% 16.6%); 
+  }
+  .carrusel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+    
+  .carrusel img {
+    width: 100%;
+    max-width: 980px;
+    height: auto;
+    display: none;
+  }
+    
+  .carrusel img.active {
+    display: block;
+  }
+    
+  button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+    
+  button.prev {
+    left: 10px;
+  }
+    
+  button.next {
+    right: 10px;
+  }
+    
+  button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+}
+
+
+
+// Estilos de el pie de página
+footer {
+  display: flex;
+  background: rgba(0, 0, 0, 0.6);
+  font-family: $font-type;
+  font-size: 1rem;
+  color: white;
+  padding: 0rem 1rem;
+  justify-content: space-between;
+  align-items: center;
+  height: 18vh;
+
+  div.title{
+    border-bottom: 2px solid white;
+  }
+  span.title {
+    font-size: 1.2em;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  p {
+    margin: 0.5rem 0 0 0;
+  }
+
+  img {
+    max-width: 250px;
+    margin: 0.5rem 0 0 0;
+  }
+}
+
+// Estilos para diseño de imágenes zona Eventos Históricos de la página Categoría
+.eventos-historicos {
+  display: flex;
+  column-gap: 2em;
+  margin: 1em;
+}
+
+.eventos-historicos-image {
+  width: 35%;
+
+  max-height: auto;
+  vertical-align: middle;
+  object-fit: cover;
+}
+
+.eventos-historicos-texto {
+  width: 65%;
+}
+
+// Estilos para diseño de imágenes en cuadrícula para páginas de detalle
+.detalle-image-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr; 
+  grid-template-rows: 1fr 1fr; 
+  grid-template-areas: 
+    "small-image-1 large-image"
+    "small-image-2 large-image";
+  row-gap: 10px;
+  column-gap: 10px;
+  height: 400px;
+  padding-bottom: 1em;
+}
+
+.small-image-1 {
+  grid-area: small-image-1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  img{
+    width: 100% !important;
+    height: 100%;
+  }
+}
+
+.small-image-2 {
+  grid-area: small-image-2; 
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  img{
+    width: 100% !important;
+    height: 100%;
+  }
+}
+
+.large-image {
+  grid-area: large-image;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  img{
+    width: 100% !important;
+    height: 100%;
+  }
+}
+
+figcaption {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 5px;
+  color: #555;
+}
+
+
+  
+// Estilos para diseño responsive
+@media (max-width: 768px) {
+  html{
+    width: 100vw;
+    margin: auto;  
+  }  
+  
+  header {
+    nav {
+      width: 90vw;
+    }
+    nav ul {
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  }
+
+  .index-carrusel{
+    max-width: 90%;
+  }
+  
+  .index-content, .categoria-content, .detalle-content, .enlaces-content, .presentacion-content, .presentacion-content-mis_datos {
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+      font-size: 1.5rem;
+    }
+  
+    p {
+       font-size: 1rem;
+    }
+
+    figure {
+      margin: 0 0 0 0;
+      padding: 0rem;
+      
+    }
+    img {
+      width: 100%;
+      
+    }
+    .presentacion-content-mis_datos-texto{
+      max-width: 100% !important;
+    }
+
+  }
+
+  .detalle-image-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    grid-template-areas: 
+      "small-image-1 small-image-2"
+      "large-image large-image";
+  }
+
+  .eventos-historicos {
+    display: block;
+    column-gap: 2em;
+    margin: 1em;
+  }
+  
+  .eventos-historicos-image {
+    width: 90%;
+  }
+  
+  .eventos-historicos-texto {
+    width: 90%;
+  } 
+
+  footer{
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    height: 450px;
+    padding: 1em;
+    align-items: start;
+
+    .footer-mainLink{
+      margin-top: 1em;
+    }
+
+    .footer-otherLink{
+      margin-top: 1em;
+    }
+    
+    p {
+        font-size: 0.9rem;
+    }
+  }
+}
+  
