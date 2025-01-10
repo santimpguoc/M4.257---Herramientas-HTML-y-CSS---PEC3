@@ -1,0 +1,74 @@
+doctype html
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Almonaster la Real - Año 1234
+    link(rel="stylesheet" href="css/styles.scss")
+  body
+    include header.pug
+
+    main
+      article.detalle-main-article
+        section.detalle-main-section
+          .detalle-content
+            h1 Almonaster la Real en el Año 1234: Fundación y Orígenes
+
+            figure.detalle-image-grid
+              picture.large-image
+                source(srcset="images/plaza-constitucion-almonaster-la-real-little.webp" type="image/webp" media="(max-width: 768px)") 
+                source(srcset="images/plaza-constitucion-almonaster-la-real.webp" type="image/webp" media="(min-width: 769px)")
+                img(
+                  src="images/plaza-constitucion-almonaster-la-real.jpg"
+                  srcset="images/plaza-constitucion-almonaster-la-real-little.jpg 768w"
+                  sizes="(max-width: 768px) 100vw"
+                  alt="Plaza de la Constitución de Almonaster la Real"
+                  loading="lazy")
+
+              picture.small-image-1
+                source(srcset="images/Almonaster-la-real-1-1-little.webp" type="image/webp" media="(max-width: 768px)") 
+                source(srcset="images/Almonaster-la-real-1-1.webp" type="image/webp" media="(min-width: 769px)")
+                img(
+                  src="images/Almonaster-la-real-1-1.jpg"
+                  srcset="images/Almonaster-la-real-1-1.jpg 768w"
+                  sizes="(max-width: 768px) 100vw"
+                  alt="Vista general de Almonaster la Real (imagen secundaria 1)"
+                  loading="lazy")
+
+              picture.small-image-2
+                source(srcset="images/index_background_v1.webp" type="image/webp" media="(max-width: 768px)") 
+                source(srcset="images/index_background_v1.webp" type="image/webp" media="(min-width: 769px)")
+                img(
+                  src="images/index_background_v1.jpg"
+                  srcset="images/index_background_v1-little.jpg 768w"
+                  sizes="(max-width: 768px) 100vw"
+                  alt="Vista general de Almonaster la real (imagen secundaria 2)"
+                  loading="lazy")
+            figcaption Vistas de Almonaster la Real.
+
+            p En el año 1234, durante el avance de la Reconquista, Almonaster la Real fue incorporada al Reino de Castilla. Aunque no se tiene una fecha exacta para su fundación, este período marcó un cambio significativo en la región, ya que pasó del dominio musulmán al control cristiano. El proceso de reconquista liderado por el rey Fernando III de Castilla no solo buscaba recuperar territorios, sino también consolidar el poder cristiano en zonas estratégicas como la Sierra de Huelva. Almonaster, por su ubicación elevada y su fortaleza natural, se convirtió en un importante punto de control militar.
+
+            p Durante el período islámico anterior a la Reconquista, Almonaster floreció como un asentamiento agrícola y comercial, aprovechando su ubicación entre los fértiles valles de la sierra. Con la llegada de las tropas cristianas en 1234, comenzó un proceso de transformación cultural y arquitectónica en la localidad. Uno de los cambios más notables fue la conversión de la antigua mezquita en una iglesia, respetando gran parte de su estructura original. Este enfoque permitió a los nuevos habitantes cristianos aprovechar las infraestructuras ya existentes, al tiempo que imponían su propia fe y costumbres.
+
+            p Tras su incorporación al Reino de Castilla, Almonaster la Real experimentó un proceso de repoblación, atrayendo a colonos cristianos del norte de la península. Estos nuevos pobladores no solo revitalizaron la economía local a través de la agricultura y la ganadería, sino que también participaron en la defensa del territorio frente a posibles incursiones de los reinos musulmanes que aún resistían al sur. La fusión de las culturas cristiana y musulmana dejó una profunda huella en la arquitectura y las tradiciones de la localidad, que aún hoy reflejan la riqueza histórica de su pasado medieval.
+
+            h2 Principales personajes históricos relevantes de Almonaster la Real en 1234
+            ul
+              li 
+                p 
+                  span.import Fernando III de Castilla (Fernando el Santo): 
+                  | Como rey de Castilla y León, Fernando III fue el principal responsable de la expansión cristiana hacia el sur durante la Reconquista. Bajo su liderazgo, muchas localidades del sur de España, incluida Almonaster la Real, fueron incorporadas al Reino de Castilla. Su política de repoblación y consolidación del territorio fue clave para asegurar el control cristiano en la región.
+              li 
+                p 
+                  span.import Gonzalo Ruiz Girón: 
+                  | Fue un noble castellano y uno de los caballeros más leales al rey Fernando III. Aunque no se tienen registros específicos de su participación en la toma de Almonaster, estuvo involucrado en varias campañas en Andalucía durante el siglo XIII, ayudando a consolidar los territorios recién conquistados.
+              li 
+                p
+                  span.import Alfonso Téllez de Meneses: 
+                  | Otro de los caballeros que acompañó a Fernando III en sus campañas hacia el sur. Era un destacado miembro de la nobleza castellana que participó activamente en la repoblación de las tierras recién conquistadas, promoviendo el asentamiento de colonos cristianos.
+              li 
+                p 
+                  span.import Maestre de la Orden de Santiago: 
+                  | Durante la Reconquista, las órdenes militares, como la Orden de Santiago, jugaron un papel fundamental en la defensa y repoblación de los territorios conquistados. Aunque no hay evidencia directa de su presencia en Almonaster, las órdenes militares a menudo supervisaban la construcción de fortificaciones y la organización de comunidades en zonas recién conquistadas.
+
+    include footer.pug

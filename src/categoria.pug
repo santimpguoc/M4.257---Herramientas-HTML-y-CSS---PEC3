@@ -1,0 +1,113 @@
+doctype html
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Almonaster la Real - Categoría
+    link(rel="stylesheet" href="css/styles.scss")
+  body
+    include header.pug
+
+    main
+      section.categoria-main-section
+        .categoria-content
+          h1 Lugares de Interés
+          h2 Mezquita de Almonaster
+          p 
+            figure
+              picture 
+                source(srcset="images/Mezquita_de_al-Monastir_Haram-little.webp" type="image/webp" media="(max-width: 768px)") 
+                source(srcset="images/Mezquita_de_al-Monastir_Haram.webp" type="image/webp" media="(min-width: 769px)")
+                img(
+                  src="images/Mezquita_de_al-Monastir_Haram.jpg"
+                  srcset="images/Mezquita_de_al-Monastir_Haram-little.jpg 768w"
+                  sizes="(max-width: 768px) 100vw"
+                  alt="Interior de la Mezquita de Almonaster la Real"
+                  loading="lazy")
+              figcaption Mezquita de Almonaster la Real.
+          
+          p Construida entre los siglos IX y X, es uno de los pocos ejemplos de mezquitas rurales que se conservan en España. Situada en la cima de una colina y rodeada de un paisaje natural impresionante, esta mezquita representa el arte islámico en la península ibérica, con una arquitectura sencilla y austera. Tras la Reconquista en el siglo XIII, fue adaptada al culto cristiano, preservando su estructura original. Junto a la mezquita se encuentra el Castillo de Almonaster, una fortificación medieval que ofrece vistas panorámicas de la Sierra de Huelva y destaca por su valor defensivo histórico. Además, la localidad cuenta con una plaza de toros única, una de las más antiguas de España, integrada en la ladera de la colina, lo que añade un carácter singular al conjunto patrimonial de Almonaster, donde convergen historia, cultura y tradición.
+
+          h2 Iglesia de San Martín: 
+          figure
+            picture 
+              source(srcset="images/iglesia-san-martin-almonaster-la-real-little.webp" type="image/webp" media="(max-width: 768px)") 
+              source(srcset="images/iglesia-san-martin-almonaster-la-real.webp" type="image/webp" media="(min-width: 769px)")
+              img(
+                src="images/iglesia-san-martin-almonaster-la-real.jpg"
+                srcset="images/iglesia-san-martin-almonaster-la-real-little.jpg 768w"
+                sizes="(max-width: 768px) 100vw"
+                alt="Iglesia de San Martín de Almonaster la Real"
+                loading="lazy")
+            figcaption Iglesia de San Martín de Almonaster la Real.
+          p Un destacado ejemplo de la arquitectura religiosa mudéjar en Andalucía. Construida entre los siglos XIV y XV sobre una antigua estructura visigoda, la iglesia refleja una mezcla de estilos gótico y mudéjar, que se aprecia en sus arcos de herradura y detalles decorativos. En su interior alberga valiosas obras de arte sacro y elementos históricos que han perdurado a lo largo de los siglos. La iglesia sigue siendo un lugar de culto activo y un símbolo del patrimonio religioso y cultural de Almonaster, atrayendo a visitantes interesados en su rica historia y belleza arquitectónica.
+          
+          h2 Fuente de Concejo: 
+          figure
+            source(srcset="images/fuente_de_concejo-little.webp" type="image/webp" media="(max-width: 768px)") 
+            source(srcset="images/fuente_de_concejo.webp" type="image/webp" media="(min-width: 769px)")
+            img(
+              src="images/fuente_de_concejo.jpg"
+              srcset="images/fuente_de_concejo-little.jpg 768w"
+              sizes="(max-width: 768px) 100vw"
+              alt="Fuente de concejo de Almonaster la Real"
+              loading="lazy")
+            figcaption Fuente de Concejo de Almonaster la Real.
+          p Es un elemento histórico de gran valor cultural, ubicado en pleno casco antiguo de la localidad. Construida en el siglo XVIII, esta fuente pública fue durante siglos un importante punto de encuentro para los habitantes y un recurso esencial para el abastecimiento de agua. Su estructura sencilla, con un amplio abrevadero y pilas de piedra, refleja la arquitectura popular de la época y la función comunitaria que desempeñaba. La Fuente del Concejo se ha mantenido como un símbolo de la vida cotidiana y las tradiciones de Almonaster, y continúa siendo un atractivo turístico que conecta a los visitantes con el pasado histórico de la localidad.
+
+          h2 Eventos Históricos
+
+          div.eventos-historicos
+            div.eventos-historicos-image
+              a(href="detalle_siglo_IX.pug")
+                picture.large-image
+                  source(srcset="images/index_background_v3-little.webp" type="image/webp" media="(max-width: 768px)") 
+                  source(srcset="images/index_background_v3.webp" type="image/webp" media="(min-width: 769px)")
+                  img(
+                    src="images/index_background_v3.jpg"
+                    srcset="images/index_background_v3-little.jpg 768w"
+                    sizes="(max-width: 768px) 100vw"
+                    alt="Mezquita de Almonaster la Real"
+                    loading="lazy") 
+            div.eventos-historicos-texto 
+              p 
+                span.important 
+                  a(href="detalle_siglo_IX.pug") Siglo IX - Edificación de la Mezquita:
+                | La mezquita fortaleza de Almonaster la Real fue construida en el siglo IX, durante el período del Emirato de Córdoba (711-929). Aunque no existe una fecha exacta de su construcción, se estima que fue edificada entre los siglos IX y X. Esta mezquita se construyó sobre una antigua basílica visigoda, lo que refleja la práctica común de aprovechar estructuras anteriores para levantar nuevos edificios..
+          div.eventos-historicos
+            div.eventos-historicos-image
+              a(href="detalle_año_1234.pug")
+                picture.large-image
+                  source(srcset="images/plaza-constitucion-almonaster-la-real-little.webp" type="image/webp" media="(max-width: 768px)") 
+                  source(srcset="images/plaza-constitucion-almonaster-la-real.webp" type="image/webp" media="(min-width: 769px)")
+                  img(
+                    src="images/plaza-constitucion-almonaster-la-real.jpg"
+                    srcset="images/plaza-constitucion-almonaster-la-real-little.jpg 768w"
+                    sizes="(max-width: 768px) 100vw"
+                    alt="Mezquita de Almonaster la Real"
+                    loading="lazy") 
+            div.eventos-historicos-texto 
+              p 
+                span.important 
+                  a(href="detalle_año_1234.pug") Año 1234 - Fundación de la localidad:
+                |  El año 1234 marca una época en la que Almonaster la Real pasó a formar parte de la Corona de Castilla, lo que inició un período de transformación cultural y religiosa en la localidad. La adaptación de edificios islámicos para el culto cristiano y el proceso de repoblación caracterizaron este momento histórico, dejando una herencia visible hasta hoy en el patrimonio arquitectónico y cultural de Almonaster.
+          div.eventos-historicos
+            div.eventos-historicos-image
+              a(href="detalle_año_1812.pug")
+                picture.large-image
+                  source(srcset="images/index_background_v1-little.webp" type="image/webp" media="(max-width: 768px)") 
+                  source(srcset="images/index_background_v1.webp" type="image/webp" media="(min-width: 769px)")
+                  img(
+                    src="images/index_background_v1.jpg"
+                    srcset="images/index_background_v1-little.jpg 768w"
+                    sizes="(max-width: 768px) 100vw"
+                    alt="Mezquita de Almonaster la Real"
+                    loading="lazy") 
+            div.eventos-historicos-texto 
+              p
+                span.important 
+                  a(href="detalle_año_1812.pug") Año 1812 - Almonaster en la Guerra de Independencia:
+                |  Durante la Guerra de Independencia Española contra la ocupación napoleónica, Almonaster la Real se vio afectada por el conflicto que asolaba el país. Aunque la localidad no fue escenario de grandes batallas, su posición en la Sierra de Huelva la convirtió en un punto de paso estratégico para las tropas y las partidas de guerrilleros que luchaban contra los franceses en la región. La comunidad local contribuyó activamente al esfuerzo de resistencia, proporcionando apoyo logístico y refugio a los combatientes. Este período dejó una huella en la memoria colectiva de Almonaster, que recuerda la valentía y el espíritu de resistencia de sus habitantes en defensa de su tierra y su independencia.
+
+          
+    include footer.pug
