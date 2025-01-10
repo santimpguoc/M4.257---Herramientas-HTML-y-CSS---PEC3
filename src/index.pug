@@ -37,12 +37,13 @@ html(lang="es")
                           srcset=`${image.src}-little.jpg 768w`
                           sizes="(max-width: 768px) 100vw"
                           alt=image.alt
-                          class="clip-path_img")
+                          class="clip-path_img"
+                          loading="lazy")
                     
                     button.prev &lt;
                     button.next &gt;
 
-                script(src="js/script.js")
+                script(src="js/script.js" defer)
 
 
     include footer.pug
