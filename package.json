@@ -4,7 +4,7 @@
   "description": "",
   "author": "Santiago Martín-Palomo García",
   "scripts": {
-    "dev": "node src/js/imagesToWebP.js && parcel src/index.pug --open --no-cache",
+    "dev": "node src/js/imagesToWebP.js && parcel src/* --open --no-cache",
     "build": "node src/js/imagesToWebP.js && npm run clean && parcel build src/*.pug --public-url /M4.257---Herramientas-HTML-y-CSS---PEC3/ --dist-dir dist --no-cache",
     "deploy": "gh-pages -d dist --add",
     "clean": "rimraf dist .parcel-cache"
