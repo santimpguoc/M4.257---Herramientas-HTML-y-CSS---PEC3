@@ -5,7 +5,7 @@
   "author": "Santiago Martín-Palomo García",
   "scripts": {
     "dev": "node src/js/imagesToWebP.js && parcel src/* --open --no-cache",
-    "build": "node src/js/imagesToWebP.js && npm run clean && parcel build src/*.pug --public-url /M4.257---Herramientas-HTML-y-CSS---PEC3/ --dist-dir dist --no-cache",
+    "build": "node src/js/imagesToWebP.js && npm run clean && parcel build src/index.pug --public-url /M4.257---Herramientas-HTML-y-CSS---PEC3/ --dist-dir dist --no-cache",
     "deploy": "gh-pages -d dist --add",
     "clean": "rimraf dist .parcel-cache"
   },
@@ -14,7 +14,7 @@
     "@babel/preset-env": "^7.26.0",
     "@parcel/transformer-pug": "^2.13.3",
     "@parcel/transformer-sass": "^2.13.3",
-    "gh-pages": "^6.2.0",
+    "gh-pages": "^6.3.0",
     "npm-run-all": "^4.1.5",
     "parcel": "^2.13.3",
     "rimraf": "^5.0.10",
